@@ -5,12 +5,21 @@ description = "Tools for the author to facilitate various tasks in paleontologic
 authors = ["AFg6K7h4fhy2 <127630341+AFg6K7h4fhy2@users.noreply.github.com>"]
 readme = "README.md"
 license = "MIT"
-package-mode = false
+packages = [{include = "paleo_utils"}]
+include = [
+    "paleo_utils/fonts/*.otf"
+]
+
 
 [tool.poetry.dependencies]
 python = "^3.12"
 pre-commit = "^3.7.0"
+pillow = "^11.0.0"
+attrs = "^24.2.0"
 
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.3"
 
 [build-system]
 requires = ["poetry-core"]
